@@ -9,7 +9,7 @@ const SplashScreen = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-    navigation.navigate("OnBoarding")
+    navigation.navigate("OnboardingFlow")
     }, 3000);
 
     return () => clearTimeout(timer); 

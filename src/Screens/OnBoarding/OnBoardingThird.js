@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
-const OnBoarding = () => {
+const OnBoardingThird = () => {
   const navigation= useNavigation();
   const handleNavigation=()=>{
     navigation.navigate('OnBoardingSecond')
@@ -13,11 +13,11 @@ const OnBoarding = () => {
     <View style={styles.imageWrapper}>
       <Image
         style={styles.image}
-        source={require('../../assets/OnBoarding/Image.png')}
+        source={require('../../assets/OnBoarding/OnBoardingThird.png')}
       />
     </View>
-    <View style={styles.section}><Text style={styles.topheading}>Meet Doctor Online</Text>
-    <Text style={styles.content}>Connect with Specialized Doctors Online for Convenient and Comprehensive Medical Consultations.</Text>
+    <View style={styles.section}><Text style={styles.topheading}>Thousands of Online Specialists</Text>
+    <Text style={styles.content}> Explore a Vast Array of Online Medical Specialists, Offering an Extensive Range of Expertise Tailored to Your Healthcare Needs.</Text>
     <TouchableOpacity onPress={handleNavigation} style={styles.button}><Text style={styles.buttonText}>Next</Text></TouchableOpacity>
     <Text  style={styles.skip}>Skip</Text>
     </View>
@@ -25,4 +25,4 @@ const OnBoarding = () => {
   );
 };
 
-export default OnBoarding;
+export default OnBoardingThird;
