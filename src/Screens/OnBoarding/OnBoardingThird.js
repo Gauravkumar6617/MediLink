@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 const OnBoardingThird = () => {
   const navigation= useNavigation();
   const handleNavigation=()=>{
-    navigation.navigate('OnBoardingSecond')
+    navigation.navigate('AuthenticationFlow')
   } 
   return (
 

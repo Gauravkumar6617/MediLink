@@ -8,9 +8,12 @@ import TestComponent from '../test/TestComponent';
 import OnBoarding from '../Screens/OnBoarding/OnBoarding';
 import OnBoardingSecond from '../Screens/OnBoarding/OnBoardingSecond';
 import OnBoardingThird from '../Screens/OnBoarding/OnBoardingThird';
+import Login from '../Screens/Authentication/Login/Login';
+import Register from '../Screens/Authentication/Register/Register';
 
 const RootStack = createNativeStackNavigator();
 const OnboardingStack = createNativeStackNavigator();
+const AuthenticationStack= createNativeStackNavigator();
 
 
 // ✅ Onboarding Navigator Function (sub-navigator)
@@ -24,6 +27,14 @@ export const OnboardingNavigator = () => {
   );
 };
 
+export const AuthenticationNavigator=()=>{
+  return(
+<AuthenticationStack.Navigator screenOptions={{headerShown:false}}>
+  <AuthenticationStack.Screen name='Login' component={Login}/>
+  <AuthenticationStack.Screen name='Register' component={Register}/>
+</AuthenticationStack.Navigator>
+  );
+}
 
 // ✅ Root Navigator (main entry)
 const RootNavigation = () => {
@@ -32,6 +43,7 @@ const RootNavigation = () => {
       <RootStack.Screen name="SplashScreen" component={SplashScreen} />
       <RootStack.Screen name="OnboardingFlow" component={OnboardingNavigator} />
       <RootStack.Screen name="TestComponent" component={TestComponent} />
+      <RootStack.Screen name='AuthenticationFlow' component={AuthenticationNavigator}/>
     </RootStack.Navigator>
   );
 };
