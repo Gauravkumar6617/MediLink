@@ -6,12 +6,11 @@ import COLORS from '../../../Common/Colors';
 
 export default function Register() {
   const [activeTab, setActiveTab] = useState('user'); // 'user' or 'hospital'
-
   return (
     <View style={styles.container}>
         <View style={styles.logoContainer}><Image style={styles.image} source={require("../../../assets/Authentication/darklogo.png")}/>
-        <Text style={styles.headingtext}>Medi<Text style={styles.headingend}>Link</Text></Text>
-        <Text style={styles.accounttext}>Create Account</Text>
+        {/* <Text style={styles.headingtext}>Medi<Text style={styles.headingend}>Link</Text></Text> */}
+        <Text style={styles.accounttext}>Create an Account</Text>
         {/* <Text style={styles.welcometext}>We are here to help you</Text> */}
         </View>
       {/* Tab Buttons */}

@@ -10,10 +10,13 @@ import OnBoardingSecond from '../Screens/OnBoarding/OnBoardingSecond';
 import OnBoardingThird from '../Screens/OnBoarding/OnBoardingThird';
 import Login from '../Screens/Authentication/Login/Login';
 import Register from '../Screens/Authentication/Register/Register';
+import UserHomeScreen from '../Screens/HomeScreen/UserHomeScreen/UserHomeScreen';
+import {UserHomeNavigator} from './UserBottomNavigator';
 
 const RootStack = createNativeStackNavigator();
 const OnboardingStack = createNativeStackNavigator();
 const AuthenticationStack= createNativeStackNavigator();
+const UserHomeScreenStack= createNativeStackNavigator();
 
 
 // ✅ Onboarding Navigator Function (sub-navigator)
@@ -36,6 +39,14 @@ export const AuthenticationNavigator=()=>{
   );
 }
 
+export const UserHomeScreenNavigator=()=>{
+  return(
+<UserHomeScreenStack.Navigator screenOptions={{headerShown:false}}>
+  <UserHomeScreenStack.Screen name='UserHomeNavigator' component={UserHomeNavigator}/>
+</UserHomeScreenStack.Navigator>
+  );
+}
+
 // ✅ Root Navigator (main entry)
 const RootNavigation = () => {
   return (
@@ -44,6 +55,7 @@ const RootNavigation = () => {
       <RootStack.Screen name="OnboardingFlow" component={OnboardingNavigator} />
       <RootStack.Screen name="TestComponent" component={TestComponent} />
       <RootStack.Screen name='AuthenticationFlow' component={AuthenticationNavigator}/>
+      <RootStack.Screen name='UserHomeFlow' component={UserHomeScreenNavigator}/>
     </RootStack.Navigator>
   );
 };

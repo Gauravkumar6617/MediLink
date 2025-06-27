@@ -9,6 +9,9 @@ const Login = () => {
  const handleSignInNavigation=()=>{
     navigation.navigate("Register")
   }
+  const handleUserHomePage=()=>{
+    navigation.navigate("UserHomeFlow")
+  }
   return (
     <View style={styles.container}>
       {/* Logo */}
@@ -54,8 +57,8 @@ const Login = () => {
       </View>
 
       {/* Sign In Button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.textButton}>Submit</Text>
+      <TouchableOpacity onPress={handleUserHomePage} style={styles.button}>
+        <Text  style={styles.textButton}>Submit</Text>
       </TouchableOpacity>
 
       {/* OR Divider */}
